@@ -82,7 +82,7 @@
   transition: background-color 250ms ease-in-out;
 }
 
-.arrow-down:hover {
+.ac-header:hover .arrow-down {
   background-color: #ed3b44;
 }
 
