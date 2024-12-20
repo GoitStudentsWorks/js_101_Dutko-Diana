@@ -30,7 +30,7 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
   },
     mousewheel: {
-    invert: true,
+    enabled: true,
     },
  
 });
