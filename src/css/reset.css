@@ -61,6 +61,12 @@ button {
 
 body {
   font-family: "Inter Tight", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #1c1d20;
+  color: #fafafa;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
 }
 
 .visually-hidden {
@@ -74,4 +80,8 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+section {
+  padding-top: 164px;
 }
