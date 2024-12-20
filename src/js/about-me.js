@@ -9,28 +9,27 @@ const acc = new Accordion('.info-list');
 acc.open(0);
 
 const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    allowSlidePrev: false,
-    slidesPerView: 2,
+  direction: 'horizontal',
+  loop: true,
+  allowSlidePrev: false,
+  slidesPerView: 2,
 
   breakpoints: {
-      768: {
-          slidesPerView: 3,
+    768: {
+      slidesPerView: 3,
     },
-   1440: {
-       slidesPerView: 6,
-    }
+    1440: {
+      slidesPerView: 6,
+    },
   },
 
   navigation: {
-      nextEl: '.swiper-button-next',
-    },
+    nextEl: '.swiper-button-next',
+  },
   keyboard: {
     enabled: true,
   },
-    mousewheel: {
-        enabled: true,
-    },
- 
+  mousewheel: {
+    enabled: true,
+  },
 });

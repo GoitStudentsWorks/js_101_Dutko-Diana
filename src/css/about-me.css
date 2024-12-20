@@ -16,7 +16,7 @@ font-weight: 500;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 
-    transition: transform 1100ms ease-in-out;
+    transition: transform 1500ms ease-in-out;
 }
 
 .wrapper-title {
@@ -27,7 +27,11 @@ font-weight: 500;
 }
 
 .wrapper-title:hover .about-me-title {
-  transform: translateY(185%);
+  transform: translateY(120%);
+}
+
+.wrapper-title:focus .about-me-title {
+  transform: translateY(120%);
 }
 
 .functional {
@@ -169,6 +173,14 @@ font-size: 38px;
     padding: 64px;
     height: 700px;
   }
+
+    .wrapper-title:hover .about-me-title {
+      transform: translateY(185%);
+    }
+
+        .wrapper-title:focus .about-me-title {
+          transform: translateY(185%);
+        }
 
   .info-list {
     margin-bottom: 64px;
