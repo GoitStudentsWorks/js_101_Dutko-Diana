@@ -10,13 +10,13 @@
 }
 
 .about-me-title {
-font-weight: 500;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 
-    transition: transform 1500ms ease-in-out;
+  transition: transform 1500ms ease-in-out;
 }
 
 .wrapper-title {
@@ -79,10 +79,19 @@ font-weight: 500;
   stroke-width: 2px;
   stroke: #fafafa;
   fill: transparent;
+  transition: background-color 250ms ease-in-out;
 }
 
+.arrow-down:hover {
+  background-color: #ed3b44;
+}
+
+.ac-trigger:focus .arrow-down {
+  background-color: #ed3b44;
+}
 .info-list .ac.is-active > .ac-header .ac-trigger .arrow-down {
   rotate: 180deg;
+  background-color: #ed3b44;
 }
 
 .info-list .ac.is-active > .ac-header .ac-trigger::after {
@@ -153,6 +162,15 @@ font-weight: 500;
   stroke-width: 2px;
   stroke: #3b3b3b;
   fill: transparent;
+  transition: stroke 250ms ease-in-out;
+}
+
+.arrow-right:hover {
+  stroke: #ed3b44;
+}
+
+.swiper-button-next:focus .arrow-right {
+  stroke: #ed3b44;
 }
 
 .swiper-slide-active .skill-text {
@@ -165,8 +183,8 @@ font-weight: 500;
   }
 
   .about-me-title {
-font-size: 38px;
-  line-height: 1.05;
+    font-size: 38px;
+    line-height: 1.05;
   }
 
   .wrapper-title {
@@ -174,13 +192,13 @@ font-size: 38px;
     height: 700px;
   }
 
-    .wrapper-title:hover .about-me-title {
-      transform: translateY(185%);
-    }
+  .wrapper-title:hover .about-me-title {
+    transform: translateY(185%);
+  }
 
-        .wrapper-title:focus .about-me-title {
-          transform: translateY(185%);
-        }
+  .wrapper-title:focus .about-me-title {
+    transform: translateY(185%);
+  }
 
   .info-list {
     margin-bottom: 64px;
