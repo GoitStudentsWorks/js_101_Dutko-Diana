@@ -22,6 +22,18 @@
   border-radius: 20px;
   padding: 24px;
   background-color: #242527;
+
+  transition: border 500ms ease-in-out, transform 700ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+.benefits-item:hover .benefits-icon-box {
+  transform: scale(150%) translate(165%, 50%);
+}
+
+.benefits-item:hover {
+  border: 1px solid #ed3b44;
+  transform: scale(120%);
+  background-color: rgba(38, 25, 25, 0.623);
 }
 
 .benefits-icon-box {
@@ -32,6 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 700ms ease-in-out;
 }
 
 .benefits-icon {
