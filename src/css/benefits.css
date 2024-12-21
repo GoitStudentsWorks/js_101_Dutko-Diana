@@ -75,10 +75,30 @@
 @media screen and (min-width: 768px) {
   .benefits-list {
     flex-wrap: wrap;
-    width: 704px;
+    flex-direction: row;
   }
 
   .benefits-item {
     width: calc((100% - 16px) / 2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .benefits-container {
+    display: flex;
+    flex-direction: row;
+    gap: 412px;
+  }
+
+  .benefits-contents {
+    margin-top: 0;
+  }
+
+  .benefits-title {
+    margin-top: 0;
+  }
+
+  .benefits-list {
+    width: 680px;
   }
 }
