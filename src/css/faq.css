@@ -47,6 +47,8 @@ top: -20px;
   margin-bottom: 16px;
 }
 
+
+
 .accordion-header {
   font-weight: 600;
   font-size: 20px;
@@ -62,6 +64,8 @@ border-radius: 100px;
 padding: 8px;
 width: 36px;
 height: 36px;
+background-color: transparent;
+cursor: pointer;
 }
 
 .arrow-icon {
