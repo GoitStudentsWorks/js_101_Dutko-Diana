@@ -28,7 +28,7 @@
     gap: 4px;
 }
 
-.hero-item {
+.hero-item a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,6 +38,12 @@
     width: 37px;
     height: 37px;
     font-size: 14px;
+    transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+.hero-item a:hover,
+.hero-item a:focus {
+    border-color: #ed3b44;
+    color: #ed3b44;
 }
 .hero-email {
         display: flex;
@@ -49,7 +55,13 @@
         font-size: 14px;
         align-items: center;
         justify-content: center;
+        transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
     }
+.hero-email:hover,
+.hero-email:focus {
+    border-color: #ed3b44;
+    color: #ed3b44;
+}
 .contacts-wrapper {
     display: flex;
     gap: 4px;
@@ -78,7 +90,7 @@
         margin-bottom: 187px;
     }
 
-    .hero-item {
+    .hero-item a {
         padding: 18px 20px;
         width: 55px;
         height: 55px;
