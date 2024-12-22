@@ -33,25 +33,21 @@ async function fetchReviews() {
 
 // формуємо картки
 function createReviews(images) {
-      const reviewContainer = document.getElementById('gallery-container');
+  const reviewContainer = document.getElementById('gallery-container');
 
-      images.forEach(({ avatar_url, author, review }) => {
-        const imgCard = document.createElement('div');
-        imgCard.classList.add('review-gallery-item');
-        
-        imgCard.innerHTML = `
-          <div class="review-gallery-link">
+  images.forEach(({ avatar_url, author, review }) => {
+    const imgCard = document.createElement('li');
+    imgCard.classList.add('review-gallery-item');
+
+    imgCard.innerHTML = `
             <img src="${avatar_url}" alt="${author}'s avatar" class="avatar"/>
-            <div class="review-info">
               <h3 class='review-author'>${author}</h3>
-              <p class='review-text'><b>Review:</b> ${review}</p>
-            </div>
-          </div>
+              <p class='review-text'>${review}</p>
         `;
-        
-        reviewContainer.appendChild(imgCard); 
-      });
-    }
+
+    reviewContainer.appendChild(imgCard);
+  });
+}
 // грузимо при завантаженні
 window.onload = fetchReviews;
     
