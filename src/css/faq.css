@@ -14,6 +14,7 @@ padding: 20px 0;
 
 .accordion-item {
 margin-bottom: 40px;
+ position: relative;
 }
 
 .accordion-item:last-child {
