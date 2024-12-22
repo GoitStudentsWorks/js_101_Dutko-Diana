@@ -1,0 +1,79 @@
+.faq-section {
+  padding-top: 64px;
+}
+
+.section-title {
+font-size: 16px;
+color: rgba(250, 250, 250, 0.4);
+ margin-bottom: 32px;
+}
+
+.accordion-container {
+padding: 20px 0;
+}
+
+.accordion-item {
+margin-bottom: 40px;
+ position: relative;
+}
+
+.accordion-item:last-child {
+       margin-bottom: 0;
+}
+
+.accordion-item::after {
+content: '';
+width: 100%;
+height: 1px;
+background-color:rgba(250, 250, 250, 0.2);
+position: absolute;
+bottom: -20px;
+}
+
+.accordion-item:first-child::before {
+content: '';
+width: 100%;
+height: 1px;
+background-color: rgba(250, 250, 250, 0.2);
+position: absolute;
+top: -20px;
+}
+
+.accordion-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 44px;
+  margin-bottom: 16px;
+}
+
+
+
+.accordion-header {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.arrow-icon-box {
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 100px;
+padding: 8px;
+width: 36px;
+height: 36px;
+background-color: transparent;
+cursor: pointer;
+}
+
+.arrow-icon {
+  stroke-width: 2px;
+  stroke: #fafafa;
+  fill: transparent;
+}
+
+.accordion-text {
+  color: rgba(250, 250, 250, 0.6);
+}
