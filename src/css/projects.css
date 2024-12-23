@@ -36,8 +36,6 @@
 .project-tech-skills {
   padding: 32px;
   background-color: #fafafa;
-  /* padding-top: 32px;
-  padding-left: 32px; */
 }
 
 .tech-skills-list {
@@ -55,11 +53,6 @@
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   padding: 13px 18px;
-  /* font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: #1c1d20; */
 }
 
 .tech-skills-text {
@@ -67,13 +60,10 @@
 }
 
 .projects-text {
-  /* font-family: 'Inter Tight', sans-serif;
-  font-weight: 500; */
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: -0.03em;
   color: #1c1d20;
-  /* padding-right: 32px; */
   margin-bottom: 32px;
 }
 
@@ -81,14 +71,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: block; */
   border-radius: 60px;
   padding: 13px 32px;
   width: 141px;
   height: 45px;
   background-color: #ed3b44;
   font-weight: 500;
-  /* margin-bottom: 32px; */
+  transition: background-color 250ms ease-in-out;
+}
+
+.project-link:hover,
+.project-link:focus {
+background-color: #e0373f;
 }
 
 .project-image {
@@ -153,9 +147,6 @@
 
   .project-tech-skills {
     padding: 64px;
-    /* padding-top: 64px;
-    padding-left: 64px;
-    padding-right: 146px; */
   }
 
   .tech-skills-list {
@@ -171,14 +162,12 @@
     font-size: 44px;
     line-height: 1;
     width: 494px;
-    /* padding: 0; */
   }
 
   .project-link {
     padding: 18px 50px;
     width: 177px;
     height: 55px;
-    /* margin-bottom: 64px; */
   }
 
   .project-image {
@@ -204,12 +193,6 @@
   .projects {
     padding-top: 96px;
   }
-
-  /* .swiper-slide {
-    display: flex;
-    flex-direction: row;
-    width: 1376px;
-  } */
 
   .swiper-slide.project-slide {
     display: flex;
