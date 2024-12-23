@@ -14,7 +14,7 @@
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-100%);
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out, transform 250ms ease-in-out;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out, transform 500ms ease-in-out;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -71,7 +71,7 @@
     margin-right: auto;
     opacity: 1;
     visibility: visible;
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
 }
 
 .mob-menu-item {
@@ -100,7 +100,7 @@
     visibility: visible;
     margin-left: auto;
     margin-right: auto;
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out, background-color 250ms ease-in-out;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out, background-color 250ms ease-in-out;
     
 }
 
