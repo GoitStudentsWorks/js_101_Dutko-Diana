@@ -1,5 +1,4 @@
-const menu = document.querySelector('.menu');
-const menuList = document.querySelector('.menu-list');
+
 
 menu.addEventListener('click', onClick);
 document.addEventListener('click', onDocumentClick);
@@ -32,3 +31,4 @@ export function handleClicks(event) {
   }
   menuList.classList.remove('show');
 }
+
