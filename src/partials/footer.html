@@ -1,50 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Work Together</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-img-text">
-                    <div class="image-and-text">
-                        <img src="./img/image-1x.jpg" srcset="./img/image-1x.jpg 1x, ./img/image-2x.jpg 2x" alt="Image"
-                            class="footer-image">
-                        <h1>LET'S <span class="work">WORK</span></h1>
-                    </div>
-                    <h1 class="together">TOGETHER</h1>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="email" placeholder="clients@gmail.com" class="input-info" required>
-                    <textarea placeholder="comments" required class="input-info"></textarea>
-                    <button type="submit" class="send-button">Send</button>
-                </form>
-                <div class="contact-info">
-                    <a href="mailto:bydret@gmail.com" class="contact-link">bydret@gmail.com</a>
-                    <a href="tel:+380111111111" class="contact-link">+380 11 1111 11 11</a>
-                </div>
-            </div>
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-img-text">
+        <div class="image-and-text">
+            <a href="../index.html">
+                <img srcset="
+            ../images/logo-image/logo-image.png    1x,
+            ../images/logo-image/logo-image@2x.png 2x
+          " alt="logo link" class="footer-image" width="44" height="44" />
+            </a>
+            <h2 class="footer-title">
+                Let’s <span class="work">work</span>
+            </h2>
         </div>
-    </footer>
-
-    <!-- Модальне вікно -->
-    <div id="thankYouModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <p class="modal-hed-p">Thank you for your interest in cooperation!</p>
-            <p class="modal-p">The manager will contact you shortly to discuss further details and opportunities for
-                cooperation. Please
-                stay in touch.</p>
+        <h2 class="footer-title">TOGETHER</h2>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <input type="email" placeholder="clients@gmail.com" class="input-info"
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
+            <input placeholder="comments" required class="input-info drop"></input>
+            <button type="submit" class="send-button">Send</button>
+        </form>
+        <div class="contact-info">
+            <a href="mailto:lloydjefferson@gmail.com" class="contact-link">lloydjefferson@gmail.com</a>
+            <a href="tel:+380111111111" class="contact-link">+380 11 1111 11 11</a>
         </div>
     </div>
+</footer>
 
-    <script src="scripts.js"></script>
-</body>
-
-</html>
+<!-- Модальне вікно -->
+<div id="thankYouModal" class="modal">
+    <div class="modal-content">
+        <button type="button" class="close-button">
+            <svg class="footer-close-icon">
+                <use href="../images/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <h2 class="modal-hed">Thank you for your interest in cooperation!</h2>
+        <p class="modal-p">
+            The manager will contact you shortly to discuss further details and
+            opportunities for cooperation. Please stay in touch.
+        </p>
+    </div>
+</div>
