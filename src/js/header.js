@@ -19,7 +19,7 @@ function onDocumentClick(event) {
   }
 }
 
-function handleClicks(event) {
+export function handleClicks(event) {
   event.preventDefault();
   const sectionId = event.target.getAttribute('href').substring(1);
 
