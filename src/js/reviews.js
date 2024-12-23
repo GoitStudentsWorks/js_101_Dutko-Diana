@@ -51,41 +51,30 @@ function createReviews(images) {
 }
     
 // свайпер
-function initializeSwiper() {
-  const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 16,
-    navigation: {
-      nextEl: '.btn-next',
-      prevEl: '.btn-prev',
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  navigation: {
+    nextEl: '.btn-next',
+    prevEl: '.btn-prev',
+    disabledClass: 'swiper-button-disabled',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1440: {
-        slidesPerView: 4,
-      },
+    1440: {
+      slidesPerView: 4,
     },
-    on: {
-      slideChange: function () {
-        const prevButton = document.querySelector('.btn-prev');
-        const nextButton = document.querySelector('.btn-next');
-
-        if (swiper.isBeginning) {
-          prevButton.disabled = true;
-        } else {
-          prevButton.disabled = false;
-        }
-
-        if (swiper.isEnd) {
-          nextButton.disabled = true;
-        } else {
-          nextButton.disabled = false;
-        }
-      },
-    },
-  });
-}
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  mousewheel: true,
+});
 // грузимо при завантаженні
 window.onload = fetchReviews;
