@@ -9,9 +9,14 @@ const swiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.button-next',
     prevEl: '.button-prev',
+    disabledClass: 'swiper-button-disabled',
   },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  mousewheel: true,
 });
