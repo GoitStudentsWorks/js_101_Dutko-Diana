@@ -22,7 +22,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.swiper-slide {
+.project-slide {
   flex-shrink: 0;
   width: 100%;
   position: relative;
@@ -141,7 +141,7 @@ background-color: #e0373f;
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-slide {
+  .project-slide {
     margin-bottom: 64px;
   }
 
@@ -194,7 +194,7 @@ background-color: #e0373f;
     padding-top: 96px;
   }
 
-  .swiper-slide.project-slide {
+  .swiper-wrapper .project-slide {
     display: flex;
     width: 1376px;
   }
