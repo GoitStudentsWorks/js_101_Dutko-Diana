@@ -82,21 +82,11 @@ p {
   .container {
     max-width: 375px;
   }
-
-  .img {
-    width: 282.29px;
-    height: 162.94px;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .container {
     max-width: 768px;
-  }
-
-  .img {
-    width: 544px;
-    height: 314px;
   }
 }
 
