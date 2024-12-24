@@ -6,6 +6,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
+
+const reviewContainer = document.getElementById('gallery-container');
 // запит на сервер
 async function fetchReviews() {
    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
@@ -17,7 +19,8 @@ async function reviews() {
     const review = await fetchReviews();
     createReviews(review);
 
-  } catch(error) {
+   } catch (error) {
+     reviewContainer.innerHTML = '<p class="error-message">Not found</p>'
    return iziToast.error({
         title: 'Error',
         message: 'Not Found',
@@ -36,8 +39,6 @@ reviews();
 
 // формуємо картки
 function createReviews(images) {
-  const reviewContainer = document.getElementById('gallery-container');
-
   images.forEach(({ avatar_url, author, review }) => {
     const imgCard = document.createElement('li');
     imgCard.classList.add('review-gallery-item', 'swiper-slide');
