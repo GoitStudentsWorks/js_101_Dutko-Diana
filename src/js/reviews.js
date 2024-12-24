@@ -2,34 +2,36 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 // додав ізітост
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 // запит на сервер
 async function fetchReviews() {
-      try {
-        const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
-        
-        if (!response.ok) {
-          iziToast.error({
-            title: 'Error',
-            message: 'Not Found',
-            position: 'topRight',
-          });
-          throw new Error('Not Found');
-        }
+  try {
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
 
-        const data = await response.json();
-
-        if (Array.isArray(data)) {
-          createReviews(data); 
-        } else {
-          console.error("Data format is incorrect");
-        }
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
+    if (!response.ok) {
+      iziToast.error({
+        title: 'Error',
+        message: 'Not Found',
+        position: 'topRight',
+      });
+      throw new Error('Not Found');
     }
+
+    const data = await response.json();
+
+    if (Array.isArray(data)) {
+      createReviews(data);
+    } else {
+      console.error('Data format is incorrect');
+    }
+  } catch (error) {
+    console.error('Error fetching data: ', error);
+  }
+}
 
 // формуємо картки
 function createReviews(images) {
@@ -47,11 +49,11 @@ function createReviews(images) {
 
     reviewContainer.appendChild(imgCard);
   });
-    initializeSwiper();
+  initializeSwiper();
 }
-    
+
 // свайпер
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.reviews-container.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 16,
   navigation: {
