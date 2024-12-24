@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.projects-container.swiper-container', {
   direction: 'horizontal',
   slidesPerView: 1,
   navigation: {

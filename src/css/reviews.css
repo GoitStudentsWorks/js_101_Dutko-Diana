@@ -10,7 +10,7 @@
   min-height: 302px;
   max-height: 302px;
 }
-.swiper-container {
+.reviews-container.swiper-container {
   overflow: hidden;
 }
 /* rest */

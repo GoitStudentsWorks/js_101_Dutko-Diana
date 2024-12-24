@@ -12,7 +12,7 @@
   margin-bottom: 32px;
 }
 
-.swiper-container {
+.projects-container.swiper-container {
   width: 100%;
   overflow: hidden;
 }
@@ -194,7 +194,7 @@ background-color: #e0373f;
     padding-top: 96px;
   }
 
-  .swiper-wrapper .project-slide {
+  .projects-wrapper.swiper-wrapper .project-slide {
     display: flex;
     width: 1376px;
   }
