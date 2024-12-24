@@ -55,13 +55,13 @@
   padding: 0;
 }
 @media screen and (max-width: 375px) {
-  .container {
+  .covers-container {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container {
+  .covers-container {
     max-width: 100%;
   }
 }
@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .container {
+  .covers-container {
     max-width: 100%;
   }
   .marquee {
