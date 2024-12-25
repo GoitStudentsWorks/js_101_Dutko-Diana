@@ -76,10 +76,12 @@ form.contact-form {
     transition: background-color 0.3s;
     margin-top: 16px;
 }
+
 .close-button:hover{
     background-color: #ED3B44;
 }
 
+.send-button:hover,
 .send-button:focus {
     background-color: #E0373F;
 }
@@ -101,6 +103,13 @@ form.contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+border-color: #ED3B44;
+color: #ED3B44;
 }
 
 .modal {
