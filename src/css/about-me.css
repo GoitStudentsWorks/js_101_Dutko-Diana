@@ -26,12 +26,16 @@
   height: 500px;
 }
 
-.wrapper-title:hover .about-me-title {
-  transform: translateY(120%);
+.wrapper-title:hover .about-me-title,
+.wrapper-title:focus .about-me-title {
+  transform: translateY(74%);
 }
 
-.wrapper-title:focus .about-me-title {
-  transform: translateY(120%);
+@media screen and (min-width: 375px) {
+  .wrapper-title:hover .about-me-title,
+  .wrapper-title:focus .about-me-title {
+    transform: translateY(120%);
+  }
 }
 
 .functional {
@@ -109,7 +113,6 @@
 
 .info-list .ac .ac-panel .ac-text {
   font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
