@@ -19,18 +19,25 @@
       </h2>
     </div>
     <form class="contact-form" id="contactForm">
-      <input
+      <!-- <input
         type="email"
         placeholder="clients@gmail.com"
         class="input-info"
         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         required
-      />
+      /> -->
+    <div class="input-wrap">
+        <input type="email" placeholder="clients@gmail.com" class="input-info"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required />
+        <p class="message green drop-dop">Success!</p>
+        <p class="message red drop-dop">Invalid email, try again</p>
+    </div>
       <input
         placeholder="comments"
         required
         class="input-info drop"
       ></input>
+      
       <button type="submit" class="send-button">Send</button>
     </form>
 
