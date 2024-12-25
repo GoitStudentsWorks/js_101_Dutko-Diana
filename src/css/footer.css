@@ -31,7 +31,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 4px;
-    /* Відстань між зображенням і текстом */
 }
 
 .work {
@@ -137,7 +136,7 @@ color: #ED3B44;
 }
 
 .modal {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
