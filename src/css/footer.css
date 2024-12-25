@@ -1,5 +1,3 @@
-
-
 .footer {
     padding-top: 64px;
 }
@@ -7,6 +5,7 @@
 .footer-content {
     padding: 32px 16px;
 }
+
 .footer-img-text {
     display: flex;
     gap: 8px;
@@ -36,7 +35,7 @@
 }
 
 .work {
-    color: #ed3b44;
+    color: #ED3B44;
 }
 
 form.contact-form {
@@ -44,24 +43,46 @@ form.contact-form {
     margin-bottom: 64px;
 }
 
- input {
-     padding-bottom: 20px;
-     border: none;
-     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-     background-color: transparent;
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 1.5;
-     letter-spacing: -0.02em;
-     color: #fafafa;
-     width: 100%;
-     margin-bottom: 16px;
- }
+input {
+    padding-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #FAFAFA;
+    width: 100%;
+    margin-bottom: 16px;
+}
 
- input:focus {
-     outline: none;
-     border-bottom: 1px solid rgba(250, 250, 250, 0.5);
- }
+input:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.message {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+}
+
+.drop-dop {
+    top: 45px;
+}
+
+.green {
+    color: #3CBC81;
+}
+
+.red {
+    color: #E74A3B;
+}
 
 
 .send-button {
@@ -76,10 +97,12 @@ form.contact-form {
     transition: background-color 0.3s;
     margin-top: 16px;
 }
-.close-button:hover{
+
+.close-button:hover {
     background-color: #ED3B44;
 }
 
+.send-button:hover,
 .send-button:focus {
     background-color: #E0373F;
 }
@@ -101,6 +124,13 @@ form.contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    border-color: #ED3B44;
+    color: #ED3B44;
 }
 
 .modal {
@@ -159,7 +189,7 @@ form.contact-form {
     height: 100%;
 }
 
-.modal-content {
+/* .modal-content {
     position: relative;
     background-color: #444;
     padding: 20px;
@@ -169,17 +199,33 @@ form.contact-form {
     max-width: 300px;
     margin: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+} */
+
+.modal-content {
+    position: relative;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 343px;
+    height: 246px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Модалка  */
 .modal-hed-p {
     font-family: "Inter Tight", sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 150%;
-        letter-spacing: -0.02em;
-        text-align: center;
-        color: #fafafa;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FAFAFA;
 }
 
 .modal-p {
@@ -201,39 +247,39 @@ form.contact-form {
 @media screen and (min-width: 768px) {
 
     .footer {
-            padding-top: 96px;
-        }
+        padding-top: 96px;
+    }
 
-        .footer-content {
-            padding: 80px 32px 169px;
-        }
+    .footer-content {
+        padding: 80px 32px 169px;
+    }
 
-        .footer-img-text {
-            gap: 20px;
-            margin-bottom: 89px;
-        }
-        
-        .footer-image {
-            width: 70px;
-            height: 70px;
-        }
+    .footer-img-text {
+        gap: 20px;
+        margin-bottom: 89px;
+    }
 
-        .footer-title {
-            font-size: 64px;
-        }
+    .footer-image {
+        width: 70px;
+        height: 70px;
+    }
 
-        .together {
-            left: -90px;
-            top: 74px;
-        }
+    .footer-title {
+        font-size: 64px;
+    }
+
+    .together {
+        left: -90px;
+        top: 74px;
+    }
 
 
-        form.contact-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 18px;
-        }
+    form.contact-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 18px;
+    }
 
 
 
@@ -243,20 +289,20 @@ form.contact-form {
     }
 
 
-        .send-button {
-            width: 150px;
-            height: 150px;
-            flex-shrink: 0;
-            margin-top: 0;
-        }
+    .send-button {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
 
 
-        .send-button {
-            width: 150px;
-            height: 150px;
-            flex-shrink: 0;
-            margin-top: 0;
-        }
+    .send-button {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
 
 
     /* модалка */
@@ -278,9 +324,9 @@ form.contact-form {
         margin-right: 10px;
     }
 
-        .contact-info {
-            gap: 8px;
-        }
+    .contact-info {
+        gap: 8px;
+    }
 
     .contact-link {
         height: 55px;
@@ -319,12 +365,12 @@ form.contact-form {
 @media screen and (min-width: 1440px) {
 
     .footer {
-            padding-top: 164px;
-        }
-    
-        .footer-content {
-            padding: 80px 196px 169px;
-        }
+        padding-top: 164px;
+    }
+
+    .footer-content {
+        padding: 80px 196px 169px;
+    }
 
 
     .footer-img-text {
@@ -335,13 +381,13 @@ form.contact-form {
 
     .footer-title {
         font-family: "Inter Tight", sans-serif;
-            font-weight: 500;
-            font-size: 64px;
-        
-            line-height: 100%;
-            letter-spacing: -0.03em;
-            text-transform: uppercase;
-            color: #fafafa;
+        font-weight: 500;
+        font-size: 64px;
+
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #FAFAFA;
     }
 
     .contact-form {
