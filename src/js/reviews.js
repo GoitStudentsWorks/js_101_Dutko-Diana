@@ -16,6 +16,7 @@ async function fetchReviews() {
 async function reviews() {
   try {
     const review = await fetchReviews();
+
     createReviews(review);
     const swiper = new Swiper('.reviews-container.swiper-container', {
       slidesPerView: 1,
@@ -62,16 +63,17 @@ reviews();
 
 // формуємо картки
 function createReviews(images) {
-  images.forEach(({ avatar_url, author, review }) => {
-    const imgCard = document.createElement('li');
-    imgCard.classList.add('review-gallery-item', 'swiper-slide');
-
-    imgCard.innerHTML = `
+  const reviews = images
+    .map(({ avatar_url, author, review }) => {
+      return `
+    <li class="review-gallery-item swiper-slide">
             <img src="${avatar_url}" alt="${author}'s avatar" class="avatar"/>
               <h3 class='review-author'>${author}</h3>
               <p class='review-text'>${review}</p>
+              </li>
         `;
+    })
+    .join('');
 
-    reviewContainer.appendChild(imgCard);
-  });
+  reviewContainer.insertAdjacentHTML('beforeend', reviews);
 }
