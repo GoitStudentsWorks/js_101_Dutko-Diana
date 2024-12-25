@@ -98,7 +98,8 @@ input:focus {
     margin-top: 16px;
 }
 
-.close-button:hover {
+
+.close-button:hover{
     background-color: #ED3B44;
 }
 
@@ -131,6 +132,8 @@ input:focus {
 .contact-link:focus {
     border-color: #ED3B44;
     color: #ED3B44;
+border-color: #ED3B44;
+color: #ED3B44;
 }
 
 .modal {
