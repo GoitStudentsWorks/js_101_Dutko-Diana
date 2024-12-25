@@ -5,32 +5,35 @@ const emailInput = form.querySelector('input[type="email"]');
 const successMessage = document.querySelector('.message.green');
 const errorMessage = document.querySelector('.message.red');
 
-// Функція для відкриття модального вікна
 function showModal() {
     modal.style.display = 'flex';
 }
 
-// Функція для закриття модального вікна
 function hideModal() {
     modal.style.display = 'none';
+    successMessage.style.display = 'none';
+    emailInput.style.borderBottomColor = 'rgba(250, 250, 250, 0.2)';
 }
 
-// Обробка відправки форми
-form.onsubmit = function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
-    
-    // Збираємо дані з форми
     const email = form.querySelector('input[type="email"]').value;
     const comment = form.querySelector('input[placeholder="comments"]').value;
-    const requestBody = JSON.stringify({ email: email, comment: comment });
 
-    fetch('https://portfolio-js.b.goit.study/api/requests', { // Замініть URL на ваш endpoint
+    const postToAdd = {
+        email,
+        comment,
+    };
+
+    const options = {
         method: 'POST',
+        body: JSON.stringify(postToAdd),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json; charset=UTF-8',
         },
-        body: requestBody
-    })
+    };
+
+    fetch('https://portfolio-js.b.goit.study/api/requests', options)
     .then(response => {
         if (!response.ok) {
             return response.json().then(errorData => {
@@ -39,21 +42,20 @@ form.onsubmit = function(event) {
         }
         return response.json();
     })
-    .then(data => {
+    .then(() => {
         successMessage.style.display = 'block';
         errorMessage.style.display = 'none';
-        emailInput.style.borderBottomColor = '#3CBC81'; // Зміна кольору лінії на зелений
+        emailInput.style.borderBottomColor = '#3CBC81';
         showModal();
-        form.reset(); // Очищення форми
+        form.reset();
     })
-    .catch(error => {
+    .catch(() => {
         successMessage.style.display = 'none';
         errorMessage.style.display = 'block';
-        emailInput.style.borderBottomColor = '#E74A3B'; // Зміна кольору лінії на червоний
+        emailInput.style.borderBottomColor = '#E74A3B';
     });
-};
+});
 
-// Обробка закриття модального вікна
 closeButton.onclick = hideModal;
 window.onclick = function(event) {
     if (event.target === modal) {
@@ -61,7 +63,6 @@ window.onclick = function(event) {
     }
 };
 
-// Додамо обробник події для закриття модального вікна через Esc
 window.onkeydown = function(event) {
     if (event.key === 'Escape') {
         hideModal();
