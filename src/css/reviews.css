@@ -100,6 +100,11 @@
   stroke: #3b3b3b;
 }
 @media screen and (min-width: 768px) {
+
+.reviews {
+    padding-top: 96px;
+  }
+
   .gallery-container {
     width: 704px;
     height: 302px;
@@ -143,6 +148,11 @@
   }
 }
 @media screen and (min-width: 1440px) {
+
+.reviews {
+    padding-top: 164px;
+  }
+
   .gallery-container {
     width: 1376px;
     height: 302px;

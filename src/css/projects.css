@@ -141,6 +141,12 @@ background-color: #e0373f;
 }
 
 @media screen and (min-width: 768px) {
+
+
+  .projects {
+      padding-top: 96px;
+    }
+
   .project-slide {
     margin-bottom: 64px;
   }
@@ -191,7 +197,7 @@ background-color: #e0373f;
 
 @media screen and (min-width: 1440px) {
   .projects {
-    padding-top: 96px;
+    padding-top: 164px;
   }
 
   .projects-wrapper.swiper-wrapper .project-slide {
