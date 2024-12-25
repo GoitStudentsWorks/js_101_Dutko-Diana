@@ -103,6 +103,9 @@
 /* =========== Desktop================= */
 
 @media screen and (min-width: 1440px) {
+  .faq-section {
+    padding-top: 164px;
+  }
   .accordion-container {
     display: grid;
     grid-template-columns: 50% 50%;
