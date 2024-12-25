@@ -1,13 +1,11 @@
 // бібліотека swiper завантажена:
 import Swiper from 'swiper';
 import 'swiper/css';
-// додав ізітост
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
 const reviewContainer = document.getElementById('gallery-container');
-// запит на сервер
 async function fetchReviews() {
   const response = await axios.get(
     'https://portfolio-js.b.goit.study/api/reviews'
@@ -19,6 +17,31 @@ async function reviews() {
   try {
     const review = await fetchReviews();
     createReviews(review);
+    const swiper = new Swiper('.reviews-container.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.reviews-btn.btn-next',
+        prevEl: '.reviews-btn.btn-prev',
+        disabledClass: 'swiper-button-disabled',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
+    });
   } catch (error) {
     reviewContainer.innerHTML = '<p class="error-message">Not found</p>';
     return iziToast.error({
@@ -52,30 +75,3 @@ function createReviews(images) {
     reviewContainer.appendChild(imgCard);
   });
 }
-
-// свайпер
-const swiper = new Swiper('.reviews-container.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  navigation: {
-    nextEl: '.reviews-btn.btn-next',
-    prevEl: '.reviews-btn.btn-prev',
-    disabledClass: 'swiper-button-disabled',
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-    1440: {
-      slidesPerView: 4,
-    },
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-  mousewheel: true,
-});
