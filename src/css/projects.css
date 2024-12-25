@@ -203,6 +203,10 @@ background-color: #e0373f;
     margin-bottom: 223px;
   }
 
+    .project-tech-skills {
+      width: 688px;
+    }
+
   .project-image {
     padding: 120px 37px;
     border-radius: 0 24px 24px 0;

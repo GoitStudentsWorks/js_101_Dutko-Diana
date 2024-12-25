@@ -117,6 +117,7 @@
     .hero-title {
         margin-right: auto;
         margin-left: auto;  
+        max-width: 1084px;
         margin-bottom: 243px; 
            
     }
@@ -124,6 +125,8 @@
     .hero {
         background-size: 728px;
         background-image: url('../images/hero-background/hero-desk.png');
+        max-width: 2215px;
+        margin: 0 auto;
     }
 
     @media screen and (-webkit-min-device-pixel-ratio: 2),

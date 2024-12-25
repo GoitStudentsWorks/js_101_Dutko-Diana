@@ -111,7 +111,7 @@
 
   .benefits-container {
     display: flex;
-    gap: 412px;
+    justify-content: space-between;
   }
 
   .benefits-contents {
