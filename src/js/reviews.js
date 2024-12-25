@@ -1,14 +1,14 @@
 // бібліотека swiper завантажена:
 import Swiper from 'swiper';
 import 'swiper/css';
-// додав ізітост
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
 const reviewContainer = document.getElementById('gallery-container');
+
 const reviewsSection = document.getElementById('reviews');
-// запит на сервер
+
 async function fetchReviews() {
   const response = await axios.get(
     'https://portfolio-js.b.goit.study/api/reviews'
@@ -19,7 +19,33 @@ async function fetchReviews() {
 async function reviews() {
   try {
     const review = await fetchReviews();
+
     createReviews(review);
+    const swiper = new Swiper('.reviews-container.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.reviews-btn.btn-next',
+        prevEl: '.reviews-btn.btn-prev',
+        disabledClass: 'swiper-button-disabled',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
+    });
   } catch (error) {
   }
 }
@@ -28,21 +54,21 @@ reviews();
 
 // формуємо картки
 function createReviews(images) {
-  images.forEach(({ avatar_url, author, review }) => {
-    const imgCard = document.createElement('li');
-    imgCard.classList.add('review-gallery-item', 'swiper-slide');
-
-    imgCard.innerHTML = `
+  const reviews = images
+    .map(({ avatar_url, author, review }) => {
+      return `
+    <li class="review-gallery-item swiper-slide">
             <img src="${avatar_url}" alt="${author}'s avatar" class="avatar"/>
               <h3 class='review-author'>${author}</h3>
               <p class='review-text'>${review}</p>
+              </li>
         `;
+    })
+    .join('');
 
-    reviewContainer.appendChild(imgCard);
-  });
+  reviewContainer.insertAdjacentHTML('beforeend', reviews);
 }
 
-// свайпер
 const swiper = new Swiper('.reviews-container.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 16,
@@ -90,3 +116,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 observer.observe(reviewsSection);
+
