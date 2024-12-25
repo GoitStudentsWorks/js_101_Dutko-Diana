@@ -3,130 +3,130 @@
 }
 
 .section-title {
-font-size: 16px;
-color: rgba(250, 250, 250, 0.4);
- margin-bottom: 32px;
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
 }
 
-.accordion-container {
-padding: 20px 0;
+.accordion-container .ac {
+  padding: 20px 0;
+  border: none;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+  margin: 0;
+  background-color: transparent;
 }
 
-.accordion-item {
-margin-bottom: 40px;
- position: relative;
+.accordion-container .ac:last-child {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.accordion-item:last-child {
-       margin-bottom: 0;
-}
-
-.accordion-item::after {
-content: '';
-width: 100%;
-height: 1px;
-background-color:rgba(250, 250, 250, 0.2);
-position: absolute;
-bottom: -20px;
-}
-
-.accordion-item:first-child::before {
-content: '';
-width: 100%;
-height: 1px;
-background-color: rgba(250, 250, 250, 0.2);
-position: absolute;
-top: -20px;
-}
-
-.accordion-div {
+.ac .arrow-icon-box.ac-trigger {
+  font-family: 'Inter Tight', sans-serif;
+  padding: 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 44px;
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-
-
-
-.accordion-header {
   font-weight: 600;
   font-size: 20px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
-  
+  gap: 44px;
+  color: #fafafa;
 }
 
-.arrow-icon-box {
-display: flex;
-align-items: center;
-justify-content: center;
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 100px;
-padding: 8px;
-width: 36px;
-height: 36px;
-background-color: transparent;
-cursor: pointer;
+.ac .arrow-icon-box.ac-trigger:focus {
+  color: currentColor;
+}
+
+.ac .arrow-icon-box.ac-trigger::after {
+  content: '';
 }
 
 .arrow-icon {
+  fill: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 7px;
+  min-width: 34px;
+  height: 34px;
   stroke-width: 2px;
   stroke: #fafafa;
-  fill: transparent;
-  transition: transform 0.5s ease-in;
+  transition: background-color 250ms ease-in-out;
 }
 
-
-
-.accordion-text {
+.ac .ac-panel .accordion-text.ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-    transition: 0.5s ease-in;
-
+  padding: 16px 0 0 0;
 }
 
-
-.active {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
+.ac-header:hover .arrow-icon,
+.ac-header:focus .arrow-icon {
+  background-color: #ed3b44;
 }
 
-.accordion-item.active .arrow-icon {
-  transform: rotate(180deg);
+.ac.is-active > .ac-header .arrow-icon-box.ac-trigger .arrow-icon {
+  rotate: 180deg;
+  background-color: #ed3b44;
 }
 
-.accordion-hover {
-  display: none;
+.ac.is-active > .ac-header .arrow-icon-box.ac-trigger::after {
+  content: '';
 }
 
 /* ============tablet============================ */
 
 @media screen and (min-width: 768px) {
-
   .faq-section {
-      padding-top: 96px;
-  
-    }
-
-  .arrow-icon-box {
-      padding: 10px;
-      width: 40px;
-      height: 40px;
-    }
-
-  .accordion-header {
-    padding-bottom: 26px;
+    padding-top: 96px;
   }
 
-  .accordion-item {
-    padding: 32px 0 24px;
-    max-width: 704px;
+  .accordion-container .ac {
+    padding: 32px 0 24px 0;
+  }
+
+  .ac .ac-panel .accordion-text.ac-text {
+    padding-top: 26px;
+    max-width: 656px;
+  }
+
+  .arrow-icon {
+    min-width: 40px;
+    height: 40px;
   }
 }
 
 /* =========== Desktop================= */
 
+@media screen and (min-width: 1440px) {
+  .faq-section {
+    padding-top: 164px;
+  }
+  .accordion-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+  }
 
+  .accordion-container .ac:nth-child(4),
+  .accordion-container .ac:nth-child(5),
+  .accordion-container .ac:nth-child(6) {
+    border-left: 1px solid rgba(250, 250, 250, 0.2);
+    padding-left: 32px;
+  }
 
+  .accordion-container .ac:nth-child(3) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .accordion-container .ac:nth-child(1),
+  .accordion-container .ac:nth-child(2),
+  .accordion-container .ac:nth-child(3) {
+    padding-right: 32px;
+  }
+}
