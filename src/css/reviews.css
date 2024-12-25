@@ -51,7 +51,7 @@
   -webkit-box-orient: vertical;
 }
 
-.pagination {
+.navigation {
   margin-top: 32px;
   display: flex;
   justify-content: center;
@@ -127,7 +127,7 @@
     height: 32px;
   }
 
-  .pagination {
+  .navigation {
     gap: 20px;
   }
   .avatar {
