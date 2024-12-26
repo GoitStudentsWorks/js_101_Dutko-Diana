@@ -47,6 +47,30 @@ async function reviews() {
       mousewheel: true,
     });
   } catch (error) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (reviewContainer.children.length === 0) {
+              iziToast.error({
+                title: 'Error',
+                message: 'Reviews not found.',
+                position: 'topRight',
+                backgroundColor: 'red',
+                theme: 'dark',
+                overlay: false,
+                titleColor: 'white',
+                messageColor: 'white',
+                overlayColor: 'rgba(0, 0, 0, 0.6)',
+              });
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(reviewsSection);
   }
 }
 
@@ -94,26 +118,3 @@ const swiper = new Swiper('.reviews-container.swiper-container', {
   },
   mousewheel: true,
 });
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      if (reviewContainer.children.length === 0) {
-        iziToast.error({
-          title: 'Error',
-          message: 'Reviews not found.',
-          position: 'topRight',
-          backgroundColor: 'red',
-          theme: 'dark',
-          overlay: false,
-          titleColor: 'white',
-          messageColor: 'white',
-          overlayColor: 'rgba(0, 0, 0, 0.6)',
-        });
-      }
-    }
-  });
-}, { threshold: 0.1 });
-
-observer.observe(reviewsSection);
-

@@ -23,7 +23,7 @@
   padding: 24px;
   background-color: #242527;
 
-  transition: border 500ms ease-in-out, transform 700ms ease-in-out, background-color 500ms ease-in-out;
+  transition: outline 500ms ease-in-out, transform 700ms ease-in-out, background-color 500ms ease-in-out;
 }
 
 .benefits-item:hover .benefits-icon-box {
@@ -31,7 +31,7 @@
 }
 
 .benefits-item:hover {
-  border: 1px solid #ed3b44;
+  outline: 1px solid #ed3b44;
   transform: scale(120%);
   background-color: rgba(38, 25, 25, 0.623);
 }

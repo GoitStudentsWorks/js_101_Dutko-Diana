@@ -4,6 +4,7 @@ const menuBtn = document.querySelector('.menu-button');
 const mobMenu = document.querySelector('.mobile-menu');
 const mobBtn = document.querySelector('.mobile-button');
 const menuLinks = document.querySelectorAll('.mob-menu-list a');
+const orderBtn = document.querySelector('.mob-order');
 
 menuBtn.addEventListener('click', onOpen);
 mobBtn.addEventListener('click', onClose);
@@ -14,6 +15,13 @@ menuLinks.forEach(link => {
     mobMenu.classList.remove('show');
   });
 });
+
+orderBtn.addEventListener('click', onOrder);
+
+function onOrder(event) {
+  handleClicks(event);
+  mobMenu.classList.remove('show');
+}
 
 function onOpen(event) {
   event.preventDefault();
